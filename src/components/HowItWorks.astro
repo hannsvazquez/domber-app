@@ -1,0 +1,47 @@
+---
+import CardSteps from './CardSteps.astro';
+
+const steps = [
+  {
+    title: 'Escribe el servicio que necesitas ✨🔍',
+    description: 'Añade todos los detalles posibles y nuestra AI encontrará a los profesionales ideales dentro de tu zona.'
+  },
+  {
+    title: 'Elige la opción que más te guste 🤔✅',
+    description: 'Compara entre cientos de profesionales disponibles y elige al que más te guste.'
+  },
+  {
+    title: 'Ingresa tu método de pago preferido y listo 🥳',
+    description: 'Confirma la reserva de tu servicio con total tranquilidad, tu dinero estará protegido hasta que el servicio finalice como deber ser.'
+  }
+];
+---
+
+<section class="w-full flex flex-col items-center py-16 px-4 bg-white">
+  <!-- Transparent bordered button -->
+  <button class="mb-6 px-6 py-2 border-2 border-primary rounded-full font-sans text-primary text-lg bg-transparent btn-hero">
+    ¿Cómo funciona?
+  </button>
+
+  <!-- Main Heading -->
+  <h1 class="font-sans text-primary text-4xl md:text-5xl font-bold text-center mb-2 mt-6">Sigue estos 3 simples pasos</h1>
+
+  <!-- Paragraph -->
+  <p class="font-tiro text-complementary text-lg text-center max-w-2xl mb-12">
+    Empieza a cotizar múltiples servicios de manera gratuita y encuentra al profesional que necesitas en el momento preciso.
+  </p>
+
+  <!-- Steps Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+    {steps.map((step, idx) => (
+      <div class="flex flex-col items-center">
+        <!-- Step Number Button -->
+        <div class="w-12 h-12 flex items-center justify-center rounded-full border-2 border-primary text-primary font-sans text-2xl font-normal mb-4 bg-white">
+          {idx + 1}
+        </div>
+        <!-- Card -->
+        <CardSteps title={step.title} description={step.description} />
+      </div>
+    ))}
+  </div>
+</section>

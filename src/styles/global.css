@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #295058;
+  --color-secondary: #CDF4A4;
+  --color-background: #F6F3EE;
+  --color-complementary: #5E5E65;
+  --color-complementary-70: #5E5E65B3;
+}
+
+body {
+  font-family: 'baloo-2', sans-serif;
+  background: var(--color-background);
+  color: var(--color-primary);
+}
+
+/* Utility classes for custom palette (if needed outside Tailwind) */
+.bg-primary    { background-color: var(--color-primary) !important; }
+.bg-secondary  { background-color: var(--color-secondary) !important; }
+.bg-background { background-color: var(--color-background) !important; }
+.bg-complementary { background-color: var(--color-complementary) !important; }
+.bg-complementary-70 { background-color: var(--color-complementary-70) !important; }
+
+.text-primary    { color: var(--color-primary) !important; }
+.text-secondary  { color: var(--color-secondary) !important; }
+.text-complementary { color: var(--color-complementary) !important; }
+
+.font-tiro {
+  font-family: 'Tiro-devanagari-hindi', sans-serif;
+}
+
+.btn-waitlist {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  transition: background 0.2s, color 0.2s;
+}
+.btn-waitlist:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn-hero {
+  cursor: pointer;
+}

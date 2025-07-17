@@ -1,0 +1,101 @@
+---
+import Dropdown from './Dropdown.astro';
+
+const categories = [
+  {
+    label: 'Hogar',
+    options: [
+      'Planchado y lavado',
+      'Limpieza',
+      'Cerrajero',
+      'Jardinería',
+      'Gasfitería',
+      'Electricista',
+      'Técnico de electrodomésticos',
+    ],
+  },
+  {
+    label: 'Cuidados',
+    options: [
+      'Cuidado de niños',
+      'Cuidado de adultos mayores',
+    ],
+  },
+  {
+    label: 'Belleza',
+    options: [
+      'Peluquería',
+      'Manicure y pedicure',
+      'Maquillaje',
+      'Depilación',
+      'Masajes',
+      'Limpieza facil',
+    ],
+  },
+  {
+    label: 'Mascotas',
+    options: [
+      'Paseo de perros',
+      'Baño y corte',
+    ],
+  },
+  {
+    label: 'Clases',
+    options: [
+      'Idiomas',
+      'Música',
+      'Refuerzo escolar',
+    ],
+  },
+  {
+    label: 'Deportes',
+    options: [
+      'Entrenador personal',
+      'Yoga',
+      'Pilates',
+      'Natación',
+      'Padel',
+    ],
+  },
+  {
+    label: 'Mudanzas',
+    options: [
+      'Embalaje',
+      'Transporte',
+      'Armado de muebles',
+    ],
+  },
+  {
+    label: 'Vehículos',
+    options: [
+      'Mecánica',
+      'Lavado',
+      'Chofer',
+      'Revisión técnica',
+      'Auxilio vial',
+    ],
+  },
+  {
+    label: 'Otros',
+    options: [
+      'Reparación de computadoras',
+      'Pintado de casas',
+      'Diseño de interiores'
+
+    ],
+  },
+];
+---
+<section class="w-full flex flex-col items-center py-12 bg-[#F5F3ED]" id="listado">
+  <button class="border-2 border-[#355B5A] bg-transparent rounded-full px-6 py-2 text-lg font-medium text-[#355B5A] mb-6">
+    Categorías de servicios
+  </button>
+  <h2 class="text-3xl md:text-4xl font-bold text-[#355B5A] text-center mb-10">
+    Todos los servicios que<br class="hidden md:block" /> necesitas desde una sola app
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-5xl mb-8 pb-[3.5rem]">
+    {categories.map(category => (
+      <Dropdown label={category.label} options={category.options} />
+    ))}
+  </div>
+</section>
