@@ -1,0 +1,47 @@
+---
+// No script needed for static section
+---
+<section class="w-full flex flex-col gap-8 max-w-7xl mx-auto px-4 md:px-8 py-8" id="cities">
+  {/* Headline Wrapper */}
+  <div class="w-full bg-primary-light rounded shadow p-6 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
+    <div>
+      <h2 class="font-baloo-2 text-3xl md:text-4xl text-[#355B5A] font-bold mb-4">Primeras ciudades<br class="hidden md:block" /> en las que podrás usar Domber</h2>
+    </div>
+    <div class="flex flex-col md:items-end">
+      <p class="font-tiro-devanagari-hindi text-lg text-[#355B5A] mb-4 md:mb-2 max-w-md">Si vives en alguna de estás ciudades, te invitamos a registrarte en nuestra lista de espera.</p>
+      <a href="#" class="font-tiro-devanagari-hindi text-lg text-[#355B5A] underline hover:text-[#2a4746] transition-colors">Registrarme ahora &gt;</a>
+    </div>
+  </div>
+
+  {/* Cities Grid */}
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Lima Card */}
+    <div class="relative rounded overflow-hidden group aspect-[4/3]">
+      <img src="/Lima_city_peru.jpg" alt="Lima" class="w-full h-full object-cover transition duration-300 group-hover:blur-sm" />
+      <div class="absolute inset-0 z-10 flex items-center justify-center">
+        <span class="bg-white px-8 py-2 rounded-full font-baloo-2 text-lg text-[#355B5A] font-semibold shadow">Lima</span>
+      </div>
+      <div class="absolute inset-0 z-0 bg-black opacity-35"></div>
+    </div>
+    {/* Chiclayo Card */}
+    <div class="relative rounded overflow-hidden group aspect-[4/3]">
+      <img src="/Chiclayo-city.jpeg" alt="Chiclayo" class="w-full h-full object-cover transition duration-300 group-hover:blur-sm" />
+      <div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+        <span class="bg-white px-8 py-2 rounded-full font-baloo-2 text-lg text-[#355B5A] font-semibold shadow">Chiclayo</span>
+      </div>
+      <div class="absolute inset-0 z-0 bg-black opacity-35"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .font-baloo-2 {
+    font-family: 'baloo-2', cursive;
+  }
+  .font-tiro-devanagari-hindi {
+    font-family: 'Tiro Devanagari Hindi', serif;
+  }
+  .bg-primary-light {
+    background-color: #D0F7B6;
+  }
+</style>
